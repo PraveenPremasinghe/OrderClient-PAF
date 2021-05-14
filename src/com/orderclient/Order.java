@@ -32,7 +32,7 @@ public class Order extends DBConnector{
 					+ "<th>Remove</th></tr>";
 			
 			
-			// create a prepared statement
+			// Create a prepared statement
 			String query = " select * from order_table";
 			PreparedStatement preparedStmt = con.prepareStatement(query);
 			ResultSet rs = preparedStmt.executeQuery();
@@ -61,7 +61,7 @@ public class Order extends DBConnector{
 				
 				
 
-				// buttons
+				// button Set
 				output += "<td><input name='btnUpdate' id = 'btnUpdate'  type='button' value='Update' class='btnUpdate btn btn-secondary' data-orderid='" + order_id + "'></td>"
 						+"<td><input name='btnRemove' id = 'btnRemove'   type='button' value='Remove' class='btnRemove btn btn-danger' data-orderid='" + order_id + "'></td></tr>";
 			}
